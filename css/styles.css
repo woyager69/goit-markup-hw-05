@@ -42,6 +42,7 @@ img {
   --active-button-color: #188ce8;
   --primary-white-color: #fff;
   --main-background-color: #f5f4fa;
+  --hero-background-color: #c4c4c4;
   --footer-background-color: #2f303a;
 }
 body {
@@ -94,9 +95,11 @@ header {
 }
 .site-nav a {
   color: var(--title-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts a {
   color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav {
   padding-top: 32px;
@@ -118,6 +121,7 @@ header {
 .contact-icon {
   fill: var(--primary-text-color);
   margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-header:hover .contact-icon {
   fill: var(--accent-color);
@@ -138,14 +142,15 @@ footer .container {
 }
 .site-nav a:hover,
 .site-nav a:focus,
-.site-nav .active,
 .contacts-header:hover,
 .contacts-header:focus,
 .address-contact:hover,
 .address-contact:focus {
   color: var(--accent-color);
 }
-
+.site-nav .active {
+  color: var(--accent-color);
+}
 /* main sections*/
 .section-title {
   font-weight: bold;
@@ -167,14 +172,16 @@ footer .container {
 
 /* hero section */
 .hero {
-  background-image: linear-gradient(to right, rgba(58, 48, 47, 0.4), rgba(47, 48, 58, 0.4)),
+  max-width: 1600px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/background-hero.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 200px 0;
+  margin: 0 auto;
 
-  background-color: var(--footer-background-color);
+  background-color: var(--hero-background-color);
 }
 .hero-title {
   font-weight: 900;
@@ -192,14 +199,12 @@ footer .container {
   letter-spacing: 0.06em;
   border-radius: 4px;
   padding: 10px 32px;
-
   display: block;
   margin: 30px auto 0 auto;
-
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-hero:hover,
 .button-hero:focus {
@@ -247,6 +252,30 @@ footer .container {
   padding-top: 2px;
   padding-bottom: 94px;
 }
+.example-item {
+  position: relative;
+  overflow: hidden;
+}
+.example-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-white-color);
+
+  background-color: #2f303acc;
+  color: #fff;
+}
 /* our team section */
 .team {
   background-color: var(--main-background-color);
@@ -292,8 +321,8 @@ footer .container {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-
   background-color: var(--primary-white-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -307,6 +336,7 @@ footer .container {
 
 .social-icon {
   fill: var(--icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* clients-list */
 .clients-list {
@@ -321,6 +351,7 @@ footer .container {
   border-radius: 4px;
   border: 1px solid var(--icon-color);
   background-color: var(--primary-white-color);
+  transition: border-color 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-logo:focus,
@@ -329,6 +360,7 @@ footer .container {
 }
 .client-icon {
   fill: var(--icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-logo:hover .client-icon,
 .client-logo:focus .client-icon {
@@ -351,13 +383,13 @@ footer .container {
   line-height: 1.62;
   letter-spacing: 0.03em;
   text-align: center;
-
   border-radius: 4px;
-
   padding: 6px 22px;
-
   color: var(--title-text-color);
   background-color: var(--main-background-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -401,6 +433,9 @@ footer .container {
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
+}
+.preview-link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .preview-link:hover,
 .preview-link:focus {
@@ -488,6 +523,7 @@ footer .container {
   height: 44px;
   border-radius: 50%;
   background-color: #ffffff1a;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link:hover,
 .footer-link:focus {
