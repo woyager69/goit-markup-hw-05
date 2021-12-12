@@ -61,10 +61,9 @@ body {
 }
 
 /* header section */
-header {
-  border-bottom: 1px solid #ececec;
-}
+
 .header-section {
+  border-bottom: 1px solid #ececec;
 }
 .header-logo,
 .footer-logo {
@@ -134,10 +133,12 @@ header .container,
 .member-cards {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 footer .container {
   display: flex;
   justify-content: flex-start;
+  align-items: baseline;
 }
 .site-nav a:hover,
 .site-nav a:focus,
@@ -220,7 +221,6 @@ footer .container {
 .button-hero:focus {
   background-color: var(--active-button-color);
 }
-
 /* advantages section */
 .advantages-list {
   display: grid;
@@ -323,27 +323,31 @@ footer .container {
   padding-left: 32px;
   padding-right: 32px;
 }
-
 .social-link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
+}
+.link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: var(--primary-white-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.social-link:hover,
-.social-link:focus {
+.link-icon:hover,
+.link-icon:focus {
   background-color: var(--accent-color);
 }
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
+.link-icon:hover .social-icon,
+.link-icon:focus .social-icon {
   fill: var(--primary-white-color);
 }
-
 .social-icon {
   fill: var(--icon-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -357,13 +361,13 @@ footer .container {
   display: flex;
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
   border: 1px solid var(--icon-color);
   background-color: var(--primary-white-color);
   transition: border-color 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .client-logo:focus,
 .client-logo:hover {
   border-color: var(--accent-color);
@@ -506,7 +510,6 @@ footer .container {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .follow {
-  margin-top: 12px;
   margin-left: 85px;
 }
 .follow-title {
