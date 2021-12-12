@@ -83,27 +83,19 @@ body {
 .header-logo-studio {
   color: var(--secondary-text-color);
 }
-.site-nav a,
-.contacts a {
+.site-link,
+.contacts-header {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 30px 0;
-}
-.site-nav a {
-  color: var(--title-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contacts a {
   color: var(--primary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav {
   padding-top: 30px;
   padding-bottom: 30px;
-}
-.site-nav {
   margin-right: 306px;
 }
 .site-nav li:not(:last-child) {
@@ -140,18 +132,18 @@ footer .container {
   justify-content: flex-start;
   align-items: baseline;
 }
-.site-nav a:hover,
-.site-nav a:focus,
+.site-link:hover,
+.site-link:focus,
 .contacts-header:hover,
 .contacts-header:focus,
 .address-contact:hover,
 .address-contact:focus {
   color: var(--accent-color);
 }
-.site-nav .active {
+.site-link.active {
   color: var(--accent-color);
 }
-.site-nav .active::after {
+.site-link.active::after {
   display: block;
   position: relative;
   top: 31px;
@@ -366,7 +358,7 @@ footer .container {
   border-radius: 4px;
   border: 1px solid var(--icon-color);
   background-color: var(--primary-white-color);
-  transition: border-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-logo:focus,
 .client-logo:hover {
