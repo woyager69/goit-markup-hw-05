@@ -55,7 +55,7 @@
       <!-- hero-section -->
       <section class="hero section">
         <h1 class="hero-title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ<br />ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-        <button type="button" class="button-hero">Заказать услугу</button>
+        <button type="button" class="button-hero" data-modal-open>Заказать услугу</button>
       </section>
 
       <!-- advantages-section -->
@@ -120,7 +120,7 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="examples-images">
             <li>
-              <div class="example-item">
+              <div class="example-thumb">
                 <img
                   src="./images/work1.jpg"
                   alt="Десктопные приложения"
@@ -131,13 +131,13 @@
               </div>
             </li>
             <li>
-              <div class="example-item">
+              <div class="example-thumb">
                 <img src="./images/work2.jpg" alt="Мобильные приложения" width="370" height="294" />
                 <p class="example-label">Мобильные приложения</p>
               </div>
             </li>
             <li>
-              <div class="example-item">
+              <div class="example-thumb">
                 <img src="./images/work3.jpg" alt="Дизайн" width="370" height="294" />
                 <p class="example-label">Дизайнерские решения</p>
               </div>
@@ -411,5 +411,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close class="modal-close-btn">
+          <svg class="close-icon" width="11" height="11">
+            <use href="images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
