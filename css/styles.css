@@ -227,7 +227,7 @@ header .container,
   pointer-events: none;
 }
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5) rotate(-180deg);
+  transform: translate(-50%, -50%) scale(0.1) rotate(-180deg);
 }
 .modal {
   position: absolute;
